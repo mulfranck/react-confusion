@@ -5,7 +5,7 @@ class DishDetail extends React.Component {
   showImg() {
     const imgInfo = this.props.theSelectedIs;
 
-    if(imgInfo !== null) {
+    if(imgInfo !== null  && imgInfo !== undefined) {
       return (
         <Card className="col-md-5 col-12">
               <CardImg src={imgInfo.image} alt={imgInfo.name}></CardImg>
@@ -40,7 +40,7 @@ class DishDetail extends React.Component {
                           year:'numeric',
                           month:'short', 
                           weekday:'short'
-                         }).format(new Date(Date.parse(forAComment.date)))}
+                        }).format(new Date(Date.parse(forAComment.date)))}
                       </p>
                     </div>
                   )

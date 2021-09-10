@@ -1,18 +1,10 @@
 import './App.css';
-import MenuPreview from './components/Menu';
-import NavBar from './components/NavBar';
+import Main from './components/Main';
 
 
 function App() {
   return (
-    <div className=" m-0 p-0">
-      <NavBar />
-      
-      <MenuPreview/>
-      
-    </div>
-
-    
+      <Main></Main>
   );
 }
 
