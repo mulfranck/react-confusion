@@ -1,11 +1,9 @@
-import React from 'react';
 import { Card, CardBody, CardImg, CardText, CardTitle } from 'reactstrap';
 
-class DishDetail extends React.Component {
-  showImg() {
-    const imgInfo = this.props.theSelectedIs;
+  const ShowImg = (props) => {
+    const imgInfo = props.theSelectedIs;
 
-    if(imgInfo !== null  && imgInfo !== undefined) {
+    if(imgInfo) {
       return (
         <Card className="col-md-5 col-12">
               <CardImg src={imgInfo.image} alt={imgInfo.name}></CardImg>
@@ -23,8 +21,8 @@ class DishDetail extends React.Component {
       )
     }
   }
-  showComments() {
-    const commentInfo = this.props.theSelectedIs;
+  const ShowComments = (props) => {
+    const commentInfo = props.theSelectedIs;
 
     if(commentInfo){
       return (
@@ -52,15 +50,18 @@ class DishDetail extends React.Component {
       <div></div>
     }
   }
-  
-  render() {
-    return (
+
+function DishDetail(props) {
+  const one = props.theSelectedIs;
+  return (
+    <div className="container">
       <div className="row justify-content-center my-5">
-        {this.showImg()}
-        {this.showComments()}
+        {console.log(one)}
+        <ShowImg theSelectedIs={one} />
+        <ShowComments theSelectedIs={props.theSelectedIs} />
       </div>
-      )
-  }
+    </div>
+    )
 }
 
 

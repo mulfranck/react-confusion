@@ -29,9 +29,9 @@ class Main extends React.Component {
                       onClick={dishId => this.selectThis(dishId)} />
         
         <DishDetail theSelectedIs={
-          this.state.allDishes.filter(
+          (this.state.allDishes.filter(
             dishes => dishes.id === this.state.selectedDishId
-          )[0]
+          )[0])
         } />
       </div>
     )
