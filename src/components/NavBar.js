@@ -6,7 +6,7 @@ class NavBar extends React.Component {
   
   render() {
     return (
-      <Navbar color="light" light expand="md">
+      <Navbar className="navbar-dark" expand="md">
         <div className="container">
           <NavbarBrand>Confusion</NavbarBrand>
 

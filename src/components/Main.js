@@ -1,8 +1,8 @@
 import React from 'react';
-import NavBar from './NavBar';
 import { AllDishes } from '../shared/AllDishes';
 import DishDetail from './DishDetail';
 import MenuPreview from './Menu';
+import Header from './Header';
 
 class Main extends React.Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class Main extends React.Component {
   render() {
     return (
       <div className=" m-0 p-0">
-        <NavBar />
+        <Header />
         
         <MenuPreview dishes={this.state.allDishes}
                       onClick={dishId => this.selectThis(dishId)} />
